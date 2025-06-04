@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <section class="mb-4">
+        <h2>About Me</h2>
+        <p>This is a brief description about me.</p>
+    </section>
+    <section class="mb-4">
+        <h2>Contact</h2>
+        <p>Email: {{ email }}</p>
+    </section>
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    <section>
+        <h2>Favorite Color</h2>
+        <p>{{ favorite_color }}</p>
+    </section>
+</div>
+{% endblock %}
