@@ -1,51 +1,91 @@
 
-/* General styles */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f8f9fa;
-    color: #333;
 }
 
-/* Header styles */
-header {
-    background-color: #007bff;
+footer {
+    background-color: #343a40;
     color: white;
-    padding: 20px 0;
-    text-align: center;
 }
 
-/* Header styles */
-title {
-    background-color: #007bff;
-    color: rgb(201, 48, 48);
-    padding: 16px 0;
-    text-align: center;
+.col-sm-10{
+    height: max-content;
 }
 
-/* Section styles */
-section {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Skills list styles */
-ul {
-    list-style-type: none;
+body, html {
+    margin: 0;
     padding: 0;
+    font-family: 'Helvetica', sans-serif;
+    height: 100%;
+    color: rgb(0, 0, 0);
 }
 
-ul li {
-    background-color: #e9ecef;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 3px;
+.hero-section {
+    background-image: url("../images/avatar.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Contact email styles */
-p {
-    font-size: 1.1em;
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5); /* overlay for contrast */
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    color: white;
+}
+
+.hero-content p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
 }

@@ -9,3 +9,6 @@ def about(request):
 
 def contact(request):
     return render(request, 'pages/contact.html')
+
+def error(request, exception):
+    return render(request, 'pages/error.html', status=404)
