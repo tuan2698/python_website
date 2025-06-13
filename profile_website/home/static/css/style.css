@@ -1,4 +1,3 @@
-
 body {
     background-color: #f8f9fa;
 }
@@ -100,4 +99,111 @@ body, html {
     color: white;
     text-decoration: none;
     font-weight: bold;
+  }
+
+.inline-flex {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add spacing between items */
+      padding-bottom: 10px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #007bff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    padding: 20px 30px;
+    position: relative;
+    width: 50%;
+  }
+
+  .timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 4px solid #007bff;
+    top: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    left: 100%; /* dùng cho left item */
+    margin-left: -10px;
+  }
+  .timeline-item.right::after {
+    left: auto;
+    right: 100%; /* dùng cho right item */
+    margin-right: -10px;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 50%;
+  }
+  .timeline-content:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    transition: 0.3s ease;
+  }
+  .timeline-content {
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  }
+
+  .timeline-image {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+
+  .timeline-content h3 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  .timeline-content p {
+    color: #666;
+  }
+
+  @media screen and (max-width: 768px) {
+    .timeline::after {
+      left: 90px;
+    }
+
+    .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 20px 40px;
+        box-sizing: border-box;
+      }
+      .timeline-item.left {
+        left: 0;
+        text-align: right;
+      }
+      .timeline-item.right {
+        left: 50%;
+        text-align: left;
+      }
   }

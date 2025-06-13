@@ -3,10 +3,31 @@
 {% block title %}This is my about page{% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <section class="mb-4">
-        <h2>About Me</h2>
-        <p>This is the about page content.</p>
-    </section>
-</div>
+<div class="timeline">
+
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <img class="timeline-image" src="https://via.placeholder.com/400x200" alt="Image 1">
+        <h3>Sự kiện 1</h3>
+        <p>Mô tả chi tiết của sự kiện đầu tiên với nội dung nhiều dòng.</p>
+      </div>
+    </div>
+  
+    <div class="timeline-item right">
+      <div class="timeline-content">
+        <img class="timeline-image" src="https://via.placeholder.com/400x200" alt="Image 2">
+        <h3>Sự kiện 2</h3>
+        <p>Mô tả sự kiện tiếp theo, nằm bên phải, vẫn giữ bố cục ảnh lớn và nội dung rõ ràng.</p>
+      </div>
+    </div>
+  
+    <div class="timeline-item left">
+      <div class="timeline-content">
+        <img class="timeline-image" src="https://via.placeholder.com/400x200" alt="Image 3">
+        <h3>Sự kiện 3</h3>
+        <p>Tiếp tục với sự kiện nằm bên trái, bạn có thể thêm bất kỳ dữ liệu nào.</p>
+      </div>
+    </div>
+  
+  </div>
 {% endblock %}

@@ -1,13 +1,32 @@
 {% extends 'base.html' %}
 
 {% block title %}This is my contact page{% endblock %}
-
+{% load static %}
 {% block content %}
 <div class="container mt-5">
     <section class="mb-4">
-        <h2>Contact Me</h2>
-        <p>This is the contact page content.</p>
+        <div class="inline-flex">
+            <img src="{% static 'images/email.png' %}" alt="email" class="email" width="50" height="50" style="cursor: pointer;">
+            <h4>Gmail :</h4>
+            <a href="mailto:ttuanvuong26@gmail.com">
+            <h4> ttuanvuong26@gmail.com</h4>
+            </a>
+        </div>
+        <div class="inline-flex">
+            <img src="{% static 'images/facebook.png' %}" alt="facebook" class="facebook" width="50" height="50">
+            <h4>Facebook:</h4>
+            <a href="https://www.facebook.com/ttuan2698">
+                <h4> Thanh Tuấn</h4>
+            </a>
+        </div>
+        <div class="inline-flex">
+            <img src="{% static 'images/phone-call.png' %}" class="email" width="50" height="50">
+            <h4>Phone : +84969150217</h4>
+        </div>
+        <div class="inline-flex">
+            <img src="{% static 'images/location.png' %}" class="email" width="50" height="50">
+            <h4>Location : Gò Vấp District, Hồ Chí Minh City</h4>
+        </div>
     </section>
-
 </div>
 {% endblock %}
